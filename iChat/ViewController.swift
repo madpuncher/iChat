@@ -8,6 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)
+    
+    let googleLabel = UILabel(text: "Get started with")
+    let emailLabel = UILabel(text: "Or sign up with")
+    let alreadyOnBoardLabel = UILabel(text: "Already onboard?")
+    
+    let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadow: true)
+    let emailButton = UIButton(title: "Email", titleColor: .white, backgroundColor: .black, isShadow: false)
+    let loginButton = UIButton(title: "Login", titleColor: .red, backgroundColor: .white, isShadow: true)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,3 +28,21 @@ class ViewController: UIViewController {
 
 }
 
+
+import SwiftUI
+
+struct ViewControllerProvider: PreviewProvider {
+    static var previews: some View {
+        ContainerView()
+            .edgesIgnoringSafeArea(.all)
+    }
+    
+    struct ContainerView: UIViewControllerRepresentable {
+        func makeUIViewController(context: Context) -> some UIViewController {
+            ViewController()
+        }
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+            
+        }
+    }
+}
