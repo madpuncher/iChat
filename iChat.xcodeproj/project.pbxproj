@@ -28,6 +28,7 @@
 		025FA7D726C18E0700320B3D /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7D626C18E0700320B3D /* Bundle-Decodable.swift */; };
 		025FA7DA26C18E3500320B3D /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 025FA7D826C18E3400320B3D /* activeChats.json */; };
 		025FA7DB26C18E3500320B3D /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 025FA7D926C18E3500320B3D /* waitingChats.json */; };
+		02A39DC526C1C48E0074B023 /* ActiveChatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DC426C1C48E0074B023 /* ActiveChatsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		025FA7D626C18E0700320B3D /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		025FA7D826C18E3400320B3D /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		025FA7D926C18E3500320B3D /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
+		02A39DC426C1C48E0074B023 /* ActiveChatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +90,7 @@
 			children = (
 				025FA7A526BFDC7700320B3D /* AppDelegate.swift */,
 				025FA7A726BFDC7700320B3D /* SceneDelegate.swift */,
-				025FA7D026C15F0F00320B3D /* MainTabBarController.swift */,
-				025FA7D226C15F3500320B3D /* ListViewController.swift */,
-				025FA7D426C15F3E00320B3D /* PeopleViewController.swift */,
+				02A39DC226C1C4790074B023 /* Controllers */,
 				025FA7CF26C15EF000320B3D /* Login&Auth controllers */,
 				025FA7C326C024C300320B3D /* Extensions */,
 				025FA7AE26BFDC7800320B3D /* Assets.xcassets */,
@@ -134,6 +134,25 @@
 				025FA7CD26C14C5900320B3D /* SetupProfileViewController.swift */,
 			);
 			path = "Login&Auth controllers";
+			sourceTree = "<group>";
+		};
+		02A39DC226C1C4790074B023 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				02A39DC326C1C4800074B023 /* Cells */,
+				025FA7D026C15F0F00320B3D /* MainTabBarController.swift */,
+				025FA7D226C15F3500320B3D /* ListViewController.swift */,
+				025FA7D426C15F3E00320B3D /* PeopleViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		02A39DC326C1C4800074B023 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				02A39DC426C1C48E0074B023 /* ActiveChatsCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +231,7 @@
 				025FA7C026BFE80400320B3D /* UIImageView + Extension.swift in Sources */,
 				025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */,
 				025FA7BC26BFE61C00320B3D /* UIFont + Extensions.swift in Sources */,
+				02A39DC526C1C48E0074B023 /* ActiveChatsCell.swift in Sources */,
 				025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */,
 				025FA7D726C18E0700320B3D /* Bundle-Decodable.swift in Sources */,
 				025FA7C826C1257B00320B3D /* TextFieldView.swift in Sources */,
