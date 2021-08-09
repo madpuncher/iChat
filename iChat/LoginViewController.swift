@@ -41,6 +41,8 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
         
         setupConstraints()
+        
+        googleButton.addGoogleImage()
     }
     
     

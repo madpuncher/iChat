@@ -25,6 +25,8 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .white
         
         setupConstraints()
+        
+        googleButton.addGoogleImage()
     }
 }
 
