@@ -21,7 +21,7 @@ class SignUpViewController: UIViewController {
     let alreadyOnBoardLabel = UILabel(text: "Already onboard?", font: .avenir20())
     
     let loginButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.titleLabel?.font = .avenir20()
@@ -41,6 +41,7 @@ class SignUpViewController: UIViewController {
     }
 }
 
+//MARK: Setting Constraints
 extension SignUpViewController {
     
     private func setupConstraints() {
