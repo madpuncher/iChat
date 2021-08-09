@@ -17,6 +17,8 @@
 		025FA7BE26BFE72100320B3D /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7BD26BFE72100320B3D /* UILabel + Extension.swift */; };
 		025FA7C026BFE80400320B3D /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7BF26BFE80400320B3D /* UIImageView + Extension.swift */; };
 		025FA7C226C023DD00320B3D /* ButtonLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7C126C023DD00320B3D /* ButtonLabelView.swift */; };
+		025FA7C626C1226A00320B3D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7C526C1226A00320B3D /* SignUpViewController.swift */; };
+		025FA7C826C1257B00320B3D /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7C726C1257B00320B3D /* TextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		025FA7BD26BFE72100320B3D /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		025FA7BF26BFE80400320B3D /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		025FA7C126C023DD00320B3D /* ButtonLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabelView.swift; sourceTree = "<group>"; };
+		025FA7C526C1226A00320B3D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		025FA7C726C1257B00320B3D /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				025FA7A526BFDC7700320B3D /* AppDelegate.swift */,
 				025FA7A726BFDC7700320B3D /* SceneDelegate.swift */,
 				025FA7A926BFDC7700320B3D /* AuthViewController.swift */,
+				025FA7C526C1226A00320B3D /* SignUpViewController.swift */,
 				025FA7C326C024C300320B3D /* Extensions */,
 				025FA7AE26BFDC7800320B3D /* Assets.xcassets */,
 				025FA7B026BFDC7800320B3D /* LaunchScreen.storyboard */,
@@ -79,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				025FA7C126C023DD00320B3D /* ButtonLabelView.swift */,
+				025FA7C726C1257B00320B3D /* TextFieldView.swift */,
 				025FA7C426C024DF00320B3D /* UIKit */,
 			);
 			path = Extensions;
@@ -170,6 +176,8 @@
 				025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */,
 				025FA7BC26BFE61C00320B3D /* UIFont + Extensions.swift in Sources */,
 				025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */,
+				025FA7C826C1257B00320B3D /* TextFieldView.swift in Sources */,
+				025FA7C626C1226A00320B3D /* SignUpViewController.swift in Sources */,
 				025FA7BA26BFE48700320B3D /* UIButton + Extension.swift in Sources */,
 				025FA7C226C023DD00320B3D /* ButtonLabelView.swift in Sources */,
 			);

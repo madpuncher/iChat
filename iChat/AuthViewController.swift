@@ -25,18 +25,22 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .white
         
         setupConstraints()
-        
     }
-    
+}
+
+//MARK: Setup Contstaints
+extension AuthViewController {
     private func setupConstraints() {
         //LOGO
         view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+        
+        
         
         //CUSTOM VIEW
         let googleView = ButtonLabelView(label: googleLabel, button: googleButton)
@@ -52,14 +56,14 @@ class AuthViewController: UIViewController {
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 160),
+            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 100),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
     }
-    
 }
 
+//MARK: Setup Canvas
 import SwiftUI
 
 struct AuthViewControllerProvider: PreviewProvider {
