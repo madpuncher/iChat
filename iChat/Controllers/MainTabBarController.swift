@@ -25,8 +25,8 @@ class MainTabBarController: UITabBarController {
             let peopleImage = UIImage(systemName: "person.2") else { return }
         
         viewControllers = [
-            createdTabBarController(viewController: listVC, title: "Conversation", image: listImage),
-            createdTabBarController(viewController: peopleVC, title: "People", image: peopleImage)
+            createdTabBarController(viewController: peopleVC, title: "People", image: peopleImage),
+            createdTabBarController(viewController: listVC, title: "Conversation", image: listImage)
         ]
     }
     

@@ -33,6 +33,9 @@
 		02A39DC926C269930074B023 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DC826C269930074B023 /* WaitingChatCell.swift */; };
 		02A39DCC26C26AFB0074B023 /* CellConfigureProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DCB26C26AFB0074B023 /* CellConfigureProtocol.swift */; };
 		02A39DCE26C26CC10074B023 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DCD26C26CC10074B023 /* SectionHeader.swift */; };
+		02A39DD026C2716B0074B023 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 02A39DCF26C2716B0074B023 /* users.json */; };
+		02A39DD226C2725B0074B023 /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DD126C2725B0074B023 /* MUser.swift */; };
+		02A39DD426C272670074B023 /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DD326C272670074B023 /* MChat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		02A39DC826C269930074B023 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		02A39DCB26C26AFB0074B023 /* CellConfigureProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigureProtocol.swift; sourceTree = "<group>"; };
 		02A39DCD26C26CC10074B023 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		02A39DCF26C2716B0074B023 /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		02A39DD126C2725B0074B023 /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		02A39DD326C272670074B023 /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			children = (
 				025FA7A526BFDC7700320B3D /* AppDelegate.swift */,
 				025FA7A726BFDC7700320B3D /* SceneDelegate.swift */,
+				02A39DD526C272CD0074B023 /* Model */,
 				02A39DC226C1C4790074B023 /* Controllers */,
 				02A39DCA26C26AD70074B023 /* Protocols */,
 				025FA7CF26C15EF000320B3D /* Login&Auth controllers */,
@@ -129,6 +136,7 @@
 				025FA7BF26BFE80400320B3D /* UIImageView + Extension.swift */,
 				025FA7BB26BFE61C00320B3D /* UIFont + Extensions.swift */,
 				025FA7BD26BFE72100320B3D /* UILabel + Extension.swift */,
+				02A39DCF26C2716B0074B023 /* users.json */,
 				025FA7D826C18E3400320B3D /* activeChats.json */,
 				025FA7D926C18E3500320B3D /* waitingChats.json */,
 			);
@@ -173,6 +181,15 @@
 				02A39DCB26C26AFB0074B023 /* CellConfigureProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		02A39DD526C272CD0074B023 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02A39DD126C2725B0074B023 /* MUser.swift */,
+				02A39DD326C272670074B023 /* MChat.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A39DD026C2716B0074B023 /* users.json in Resources */,
 				025FA7B226BFDC7800320B3D /* LaunchScreen.storyboard in Resources */,
 				025FA7DA26C18E3500320B3D /* activeChats.json in Resources */,
 				025FA7AF26BFDC7800320B3D /* Assets.xcassets in Resources */,
@@ -249,9 +267,11 @@
 				02A39DC726C268950074B023 /* GradientView.swift in Sources */,
 				025FA7BE26BFE72100320B3D /* UILabel + Extension.swift in Sources */,
 				025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */,
+				02A39DD426C272670074B023 /* MChat.swift in Sources */,
 				025FA7C026BFE80400320B3D /* UIImageView + Extension.swift in Sources */,
 				025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */,
 				025FA7BC26BFE61C00320B3D /* UIFont + Extensions.swift in Sources */,
+				02A39DD226C2725B0074B023 /* MUser.swift in Sources */,
 				02A39DC526C1C48E0074B023 /* ActiveChatsCell.swift in Sources */,
 				025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */,
 				02A39DCE26C26CC10074B023 /* SectionHeader.swift in Sources */,
