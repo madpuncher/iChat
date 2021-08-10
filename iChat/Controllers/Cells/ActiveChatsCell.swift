@@ -7,12 +7,6 @@
 
 import UIKit
 
-protocol SelfConfigureCell {
-    
-    static var resudeId: String { get }
-    func configure(with value: MChat)
-}
-
 class ActiveChatsCell: UICollectionViewCell, SelfConfigureCell {
     
     static var resudeId: String = "ActiveChatsCell"
