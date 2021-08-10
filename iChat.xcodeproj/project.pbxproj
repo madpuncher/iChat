@@ -29,6 +29,7 @@
 		025FA7DA26C18E3500320B3D /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 025FA7D826C18E3400320B3D /* activeChats.json */; };
 		025FA7DB26C18E3500320B3D /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 025FA7D926C18E3500320B3D /* waitingChats.json */; };
 		02A39DC526C1C48E0074B023 /* ActiveChatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DC426C1C48E0074B023 /* ActiveChatsCell.swift */; };
+		02A39DC726C268950074B023 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A39DC626C268950074B023 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		025FA7D826C18E3400320B3D /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		025FA7D926C18E3500320B3D /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		02A39DC426C1C48E0074B023 /* ActiveChatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatsCell.swift; sourceTree = "<group>"; };
+		02A39DC626C268950074B023 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				025FA7C126C023DD00320B3D /* ButtonLabelView.swift */,
 				025FA7C726C1257B00320B3D /* TextFieldView.swift */,
 				025FA7CB26C14ADB00320B3D /* AddPhotoView.swift */,
+				02A39DC626C268950074B023 /* GradientView.swift */,
 				025FA7C426C024DF00320B3D /* UIKit */,
 			);
 			path = Extensions;
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A39DC726C268950074B023 /* GradientView.swift in Sources */,
 				025FA7BE26BFE72100320B3D /* UILabel + Extension.swift in Sources */,
 				025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */,
 				025FA7C026BFE80400320B3D /* UIImageView + Extension.swift in Sources */,
