@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0257CA0B26C510C200A0E819 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA0A26C510C200A0E819 /* UserCell.swift */; };
 		0257CA0D26C511D100A0E819 /* ViewContrtoller + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA0C26C511D100A0E819 /* ViewContrtoller + Extension.swift */; };
+		0257CA0F26C5456C00A0E819 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA0E26C5456C00A0E819 /* ProfileViewController.swift */; };
+		0257CA1126C5655C00A0E819 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1026C5655C00A0E819 /* InsertableTextField.swift */; };
+		0257CA1326C5685100A0E819 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1226C5685100A0E819 /* UIView + Extension.swift */; };
+		0257CA1526C5C18D00A0E819 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1426C5C18D00A0E819 /* ChatRequestViewController.swift */; };
 		025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A526BFDC7700320B3D /* AppDelegate.swift */; };
 		025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A726BFDC7700320B3D /* SceneDelegate.swift */; };
 		025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A926BFDC7700320B3D /* AuthViewController.swift */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		0257CA0A26C510C200A0E819 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		0257CA0C26C511D100A0E819 /* ViewContrtoller + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewContrtoller + Extension.swift"; sourceTree = "<group>"; };
+		0257CA0E26C5456C00A0E819 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0257CA1026C5655C00A0E819 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		0257CA1226C5685100A0E819 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		0257CA1426C5C18D00A0E819 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		025FA7A226BFDC7700320B3D /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025FA7A526BFDC7700320B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025FA7A726BFDC7700320B3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +136,7 @@
 				025FA7C726C1257B00320B3D /* TextFieldView.swift */,
 				025FA7CB26C14ADB00320B3D /* AddPhotoView.swift */,
 				02A39DC626C268950074B023 /* GradientView.swift */,
+				0257CA1026C5655C00A0E819 /* InsertableTextField.swift */,
 				025FA7C426C024DF00320B3D /* UIKit */,
 			);
 			path = Extensions;
@@ -141,6 +150,7 @@
 				025FA7BB26BFE61C00320B3D /* UIFont + Extensions.swift */,
 				025FA7BD26BFE72100320B3D /* UILabel + Extension.swift */,
 				0257CA0C26C511D100A0E819 /* ViewContrtoller + Extension.swift */,
+				0257CA1226C5685100A0E819 /* UIView + Extension.swift */,
 				02A39DCF26C2716B0074B023 /* users.json */,
 				025FA7D826C18E3400320B3D /* activeChats.json */,
 				025FA7D926C18E3500320B3D /* waitingChats.json */,
@@ -165,8 +175,9 @@
 				02A39DC326C1C4800074B023 /* Cells */,
 				025FA7D026C15F0F00320B3D /* MainTabBarController.swift */,
 				025FA7D226C15F3500320B3D /* ListViewController.swift */,
+				0257CA0E26C5456C00A0E819 /* ProfileViewController.swift */,
+				0257CA1426C5C18D00A0E819 /* ChatRequestViewController.swift */,
 				025FA7D426C15F3E00320B3D /* PeopleViewController.swift */,
-				02A39DCD26C26CC10074B023 /* SectionHeader.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 				02A39DC426C1C48E0074B023 /* ActiveChatsCell.swift */,
 				02A39DC826C269930074B023 /* WaitingChatCell.swift */,
 				0257CA0A26C510C200A0E819 /* UserCell.swift */,
+				02A39DCD26C26CC10074B023 /* SectionHeader.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -270,12 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0257CA1526C5C18D00A0E819 /* ChatRequestViewController.swift in Sources */,
 				02A39DC726C268950074B023 /* GradientView.swift in Sources */,
 				025FA7BE26BFE72100320B3D /* UILabel + Extension.swift in Sources */,
 				025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */,
 				02A39DD426C272670074B023 /* MChat.swift in Sources */,
 				025FA7C026BFE80400320B3D /* UIImageView + Extension.swift in Sources */,
 				025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */,
+				0257CA0F26C5456C00A0E819 /* ProfileViewController.swift in Sources */,
 				025FA7BC26BFE61C00320B3D /* UIFont + Extensions.swift in Sources */,
 				02A39DD226C2725B0074B023 /* MUser.swift in Sources */,
 				02A39DC526C1C48E0074B023 /* ActiveChatsCell.swift in Sources */,
@@ -283,11 +297,13 @@
 				02A39DCE26C26CC10074B023 /* SectionHeader.swift in Sources */,
 				025FA7D726C18E0700320B3D /* Bundle-Decodable.swift in Sources */,
 				025FA7C826C1257B00320B3D /* TextFieldView.swift in Sources */,
+				0257CA1126C5655C00A0E819 /* InsertableTextField.swift in Sources */,
 				0257CA0B26C510C200A0E819 /* UserCell.swift in Sources */,
 				025FA7CC26C14ADB00320B3D /* AddPhotoView.swift in Sources */,
 				02A39DCC26C26AFB0074B023 /* CellConfigureProtocol.swift in Sources */,
 				02A39DC926C269930074B023 /* WaitingChatCell.swift in Sources */,
 				025FA7D326C15F3500320B3D /* ListViewController.swift in Sources */,
+				0257CA1326C5685100A0E819 /* UIView + Extension.swift in Sources */,
 				025FA7D526C15F3E00320B3D /* PeopleViewController.swift in Sources */,
 				025FA7CE26C14C5900320B3D /* SetupProfileViewController.swift in Sources */,
 				025FA7C626C1226A00320B3D /* SignUpViewController.swift in Sources */,
