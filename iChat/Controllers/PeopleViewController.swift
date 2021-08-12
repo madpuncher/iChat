@@ -41,7 +41,7 @@ class PeopleViewController: UIViewController {
         
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellid")
+        collectionView.register(UserCell.self, forCellWithReuseIdentifier: UserCell.resudeId)
     }
     
     private func setupSearchBar() {
@@ -73,9 +73,7 @@ extension PeopleViewController {
             
             switch section {
             case .users:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellid", for: indexPath)
-                cell.backgroundColor = .systemBlue
-                return cell
+                return self.configure(collectionView: collectionView, cellType: UserCell.self, with: user, indexPath: indexPath)
             }
         })
         
@@ -149,23 +147,20 @@ extension PeopleViewController: UISearchBarDelegate {
     }
 }
 
-// MARK: - SwiftUI
+//MARK: Setup Canvas
 import SwiftUI
 
 struct PeopleVCProvider: PreviewProvider {
     static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
+        ContainerView()
+            .edgesIgnoringSafeArea(.all)
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        
-        let tabBarVC = MainTabBarController()
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<PeopleVCProvider.ContainerView>) -> MainTabBarController {
-            return tabBarVC
+        func makeUIViewController(context: Context) -> some UIViewController {
+            MainTabBarController()
         }
-        
-        func updateUIViewController(_ uiViewController: PeopleVCProvider.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<PeopleVCProvider.ContainerView>) {
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
             
         }
     }
