@@ -46,8 +46,8 @@ class SignUpViewController: UIViewController {
             switch result {
             case .success(_):
                 self?.showAlert(title: "USPEH", message: "REGISTER")
-            case .failure(_):
-                self?.showAlert(title: "NE USHEH", message: "ERROR KAKOY TO")
+            case .failure(let error):
+                self?.showAlert(title: "NE USHEH", message: error.localizedDescription)
             }
         }
     }

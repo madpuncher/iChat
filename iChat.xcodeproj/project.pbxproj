@@ -15,6 +15,8 @@
 		0257CA1526C5C18D00A0E819 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1426C5C18D00A0E819 /* ChatRequestViewController.swift */; };
 		0257CA1726C66A0D00A0E819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0257CA1626C66A0D00A0E819 /* GoogleService-Info.plist */; };
 		0257CA1B26C6781500A0E819 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1A26C6781500A0E819 /* AuthService.swift */; };
+		0257CA1E26C683E600A0E819 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1D26C683E600A0E819 /* Validator.swift */; };
+		0257CA2026C684C200A0E819 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1F26C684C200A0E819 /* AuthError.swift */; };
 		025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A526BFDC7700320B3D /* AppDelegate.swift */; };
 		025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A726BFDC7700320B3D /* SceneDelegate.swift */; };
 		025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A926BFDC7700320B3D /* AuthViewController.swift */; };
@@ -56,6 +58,8 @@
 		0257CA1426C5C18D00A0E819 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		0257CA1626C66A0D00A0E819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0257CA1A26C6781500A0E819 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0257CA1D26C683E600A0E819 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0257CA1F26C684C200A0E819 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		025FA7A226BFDC7700320B3D /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025FA7A526BFDC7700320B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025FA7A726BFDC7700320B3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		0257CA1C26C683D900A0E819 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0257CA1D26C683E600A0E819 /* Validator.swift */,
+				0257CA1F26C684C200A0E819 /* AuthError.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		025FA79926BFDC7700320B3D = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 				02A39DCA26C26AD70074B023 /* Protocols */,
 				025FA7CF26C15EF000320B3D /* Login&Auth controllers */,
 				025FA7C326C024C300320B3D /* Extensions */,
+				0257CA1C26C683D900A0E819 /* Helpers */,
 				025FA7AE26BFDC7800320B3D /* Assets.xcassets */,
 				025FA7B026BFDC7800320B3D /* LaunchScreen.storyboard */,
 				025FA7B326BFDC7800320B3D /* Info.plist */,
@@ -381,6 +395,7 @@
 				02A39DCE26C26CC10074B023 /* SectionHeader.swift in Sources */,
 				025FA7D726C18E0700320B3D /* Bundle-Decodable.swift in Sources */,
 				025FA7C826C1257B00320B3D /* TextFieldView.swift in Sources */,
+				0257CA1E26C683E600A0E819 /* Validator.swift in Sources */,
 				0257CA1126C5655C00A0E819 /* InsertableTextField.swift in Sources */,
 				0257CA0B26C510C200A0E819 /* UserCell.swift in Sources */,
 				025FA7CC26C14ADB00320B3D /* AddPhotoView.swift in Sources */,
@@ -391,6 +406,7 @@
 				025FA7D526C15F3E00320B3D /* PeopleViewController.swift in Sources */,
 				025FA7CE26C14C5900320B3D /* SetupProfileViewController.swift in Sources */,
 				025FA7C626C1226A00320B3D /* SignUpViewController.swift in Sources */,
+				0257CA2026C684C200A0E819 /* AuthError.swift in Sources */,
 				0257CA0D26C511D100A0E819 /* ViewContrtoller + Extension.swift in Sources */,
 				025FA7D126C15F0F00320B3D /* MainTabBarController.swift in Sources */,
 				025FA7BA26BFE48700320B3D /* UIButton + Extension.swift in Sources */,
