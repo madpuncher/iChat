@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     let googleButton = UIButton(title: "Google", titleColor: .black, font: .avenir20(), backgroundColor: .white, isShadow: true, cornerRadius: 4)
     
     let orLabel = UILabel(text: "or", font: .avenir20())
-
+    
     let emailLabel = UILabel(text: "Email", font: .avenir20())
     
     let passwordLabel = UILabel(text: "Password", font: .avenir20())
@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     let loginButton = UIButton(title: "Login", titleColor: .white, font: .avenir20(), backgroundColor: .black, isShadow: false, cornerRadius: 4)
     
     let needAccountLabel = UILabel(text: "Need an account?", font: .avenir20())
-
+    
     let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Up", for: .normal)
@@ -33,7 +33,8 @@ class LoginViewController: UIViewController {
         return button
     }()
     
-    
+    let emailTF = TextFieldView(font: .laoSangamMN20())
+    let passwordTF = TextFieldView(font: .laoSangamMN20())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,28 @@ class LoginViewController: UIViewController {
         setupConstraints()
         
         googleButton.addGoogleImage()
+        
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
+    @objc private func loginButtonTapped() {
+        AuthService.shared.signIn(email: emailTF.text, password: passwordTF.text) { [weak self ] result in
+            switch result {
+            case .success(_):
+                self?.showAlert(title: "USPEH", message: "REGISTER")
+            case .failure(_):
+                self?.showAlert(title: "NE USHEH", message: "ERROR KAKOY TO")
+            }
+        }
+        
+    }
     
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension LoginViewController {
@@ -57,17 +77,17 @@ extension LoginViewController {
         view.addSubview(welcomeLabel)
         
         NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         let googleTF = ButtonLabelView(label: googleLabel, button: googleButton)
         
-        let emailStackView = UIStackView(arrangedSubviews: [emailLabel, TextFieldView(font: .avenir20())])
+        let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTF])
         emailStackView.axis = .vertical
         emailStackView.spacing = 10
         
-        let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, TextFieldView(font: .avenir20())])
+        let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTF])
         passwordStackView.axis = .vertical
         passwordStackView.spacing = 10
         

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		0257CA1326C5685100A0E819 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1226C5685100A0E819 /* UIView + Extension.swift */; };
 		0257CA1526C5C18D00A0E819 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1426C5C18D00A0E819 /* ChatRequestViewController.swift */; };
 		0257CA1726C66A0D00A0E819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0257CA1626C66A0D00A0E819 /* GoogleService-Info.plist */; };
+		0257CA1B26C6781500A0E819 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1A26C6781500A0E819 /* AuthService.swift */; };
 		025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A526BFDC7700320B3D /* AppDelegate.swift */; };
 		025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A726BFDC7700320B3D /* SceneDelegate.swift */; };
 		025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A926BFDC7700320B3D /* AuthViewController.swift */; };
@@ -54,6 +55,7 @@
 		0257CA1226C5685100A0E819 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		0257CA1426C5C18D00A0E819 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		0257CA1626C66A0D00A0E819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0257CA1A26C6781500A0E819 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		025FA7A226BFDC7700320B3D /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025FA7A526BFDC7700320B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025FA7A726BFDC7700320B3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0257CA1926C6780900A0E819 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02A39DD526C272CD0074B023 /* Model */,
+				0257CA1A26C6781500A0E819 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		025FA79926BFDC7700320B3D = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +136,7 @@
 			children = (
 				025FA7A526BFDC7700320B3D /* AppDelegate.swift */,
 				025FA7A726BFDC7700320B3D /* SceneDelegate.swift */,
-				02A39DD526C272CD0074B023 /* Model */,
+				0257CA1926C6780900A0E819 /* Services */,
 				02A39DC226C1C4790074B023 /* Controllers */,
 				02A39DCA26C26AD70074B023 /* Protocols */,
 				025FA7CF26C15EF000320B3D /* Login&Auth controllers */,
@@ -234,7 +245,6 @@
 				B2A3C4119D7F8C293EDF7837 /* Pods-iChat.debug.xcconfig */,
 				D8529E4E62EF4BC99F15A8BB /* Pods-iChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -356,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0257CA1526C5C18D00A0E819 /* ChatRequestViewController.swift in Sources */,
+				0257CA1B26C6781500A0E819 /* AuthService.swift in Sources */,
 				02A39DC726C268950074B023 /* GradientView.swift in Sources */,
 				025FA7BE26BFE72100320B3D /* UILabel + Extension.swift in Sources */,
 				025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */,
@@ -527,6 +538,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAY4Y2DWXX;
 				INFOPLIST_FILE = iChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAY4Y2DWXX;
 				INFOPLIST_FILE = iChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -36,8 +36,27 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
         setupConstraints()
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func signUpButtonTapped() {
+        AuthService.shared.signUp(email: emailTF.text, password: passwordTF.text, confirmPassword: confirmPasswordTF.text) { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.showAlert(title: "USPEH", message: "REGISTER")
+            case .failure(_):
+                self?.showAlert(title: "NE USHEH", message: "ERROR KAKOY TO")
+            }
+        }
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -51,7 +70,7 @@ extension SignUpViewController {
         view.addSubview(titleLabel)
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         

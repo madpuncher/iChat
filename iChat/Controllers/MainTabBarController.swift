@@ -14,6 +14,7 @@ class MainTabBarController: UITabBarController {
         setupTabBar()
         
         tabBar.tintColor = .purple
+        tabBar.barTintColor = .white
     }
     
     private func setupTabBar() {
