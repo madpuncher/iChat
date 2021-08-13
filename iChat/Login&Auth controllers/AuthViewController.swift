@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol AuthDelegate {
+    func signUp()
+    func signIn()
+}
+
 class AuthViewController: UIViewController {
     
     let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)
@@ -32,6 +37,9 @@ class AuthViewController: UIViewController {
         googleButton.addGoogleImage()
         emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        
+        signUpVC.authDelegate = self
+        loginVC.authDelegate = self
     }
     
     @objc private func emailButtonTapped() {
@@ -76,6 +84,17 @@ extension AuthViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
     }
+}
+
+extension AuthViewController: AuthDelegate {
+    func signUp() {
+        present(signUpVC, animated: true, completion: nil)
+    }
+    
+    func signIn() {
+        present(loginVC, animated: true, completion: nil)
+    }
+    
 }
 
 //MARK: Setup Canvas

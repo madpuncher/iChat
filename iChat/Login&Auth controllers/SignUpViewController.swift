@@ -31,7 +31,9 @@ class SignUpViewController: UIViewController {
     let emailTF = TextFieldView(font: .avenir20())
     let passwordTF = TextFieldView(font: .avenir20())
     let confirmPasswordTF = TextFieldView(font: .avenir20())
-        
+    
+    var authDelegate: AuthDelegate?
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,15 +47,23 @@ class SignUpViewController: UIViewController {
         AuthService.shared.signUp(email: emailTF.text, password: passwordTF.text, confirmPassword: confirmPasswordTF.text) { [weak self] result in
             switch result {
             case .success(_):
-                self?.showAlert(title: "USPEH", message: "REGISTER")
+                let setupVC = SetupProfileViewController()
+                setupVC.modalPresentationStyle = .fullScreen
+                self?.present(setupVC, animated: true, completion: nil)
             case .failure(let error):
                 self?.showAlert(title: "NE USHEH", message: error.localizedDescription)
             }
         }
     }
     
+    @objc private func loginButtonTapped() {
+        dismiss(animated: true) {
+            self.authDelegate?.signIn()
+        }
+    }
+    
     private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)   
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)

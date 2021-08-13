@@ -35,7 +35,9 @@ class LoginViewController: UIViewController {
     
     let emailTF = TextFieldView(font: .laoSangamMN20())
     let passwordTF = TextFieldView(font: .laoSangamMN20())
-    
+        
+    var authDelegate: AuthDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +59,12 @@ class LoginViewController: UIViewController {
                 self?.showAlert(title: "NE USHEH", message: error.localizedDescription)
             }
         }
-        
+    }
+    
+    @objc private func signUpButtonTapped() {
+        dismiss(animated: true) {
+            self.authDelegate?.signUp()
+        }
     }
     
     private func showAlert(title: String, message: String) {
