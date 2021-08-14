@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol AuthDelegate {
-    func signUp()
-    func signIn()
-}
-
 class AuthViewController: UIViewController {
     
     let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)

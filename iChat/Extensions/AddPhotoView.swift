@@ -70,21 +70,3 @@ class AddPhotoView: UIView {
     }
 }
 
-//MARK: Setup Canvas
-import SwiftUI
-
-struct SetupViewProfileViewControllerProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView()
-            .edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> some UIViewController {
-            SetupProfileViewController()
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-    }
-}

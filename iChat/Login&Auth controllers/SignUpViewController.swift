@@ -46,8 +46,8 @@ class SignUpViewController: UIViewController {
     @objc private func signUpButtonTapped() {
         AuthService.shared.signUp(email: emailTF.text, password: passwordTF.text, confirmPassword: confirmPasswordTF.text) { [weak self] result in
             switch result {
-            case .success(_):
-                let setupVC = SetupProfileViewController()
+            case .success(let user):
+                let setupVC = SetupProfileViewController(user: user)
                 setupVC.modalPresentationStyle = .fullScreen
                 self?.present(setupVC, animated: true, completion: nil)
             case .failure(let error):

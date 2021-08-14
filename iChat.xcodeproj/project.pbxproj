@@ -17,6 +17,9 @@
 		0257CA1B26C6781500A0E819 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1A26C6781500A0E819 /* AuthService.swift */; };
 		0257CA1E26C683E600A0E819 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1D26C683E600A0E819 /* Validator.swift */; };
 		0257CA2026C684C200A0E819 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA1F26C684C200A0E819 /* AuthError.swift */; };
+		0257CA2226C6A64200A0E819 /* AuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA2126C6A64200A0E819 /* AuthDelegate.swift */; };
+		0257CA2426C7C4BB00A0E819 /* AuthFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA2326C7C4BB00A0E819 /* AuthFirestore.swift */; };
+		0257CA2626C7C5CB00A0E819 /* AuthUserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257CA2526C7C5CB00A0E819 /* AuthUserError.swift */; };
 		025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A526BFDC7700320B3D /* AppDelegate.swift */; };
 		025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A726BFDC7700320B3D /* SceneDelegate.swift */; };
 		025FA7AA26BFDC7700320B3D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025FA7A926BFDC7700320B3D /* AuthViewController.swift */; };
@@ -60,6 +63,9 @@
 		0257CA1A26C6781500A0E819 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		0257CA1D26C683E600A0E819 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		0257CA1F26C684C200A0E819 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		0257CA2126C6A64200A0E819 /* AuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDelegate.swift; sourceTree = "<group>"; };
+		0257CA2326C7C4BB00A0E819 /* AuthFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFirestore.swift; sourceTree = "<group>"; };
+		0257CA2526C7C5CB00A0E819 /* AuthUserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserError.swift; sourceTree = "<group>"; };
 		025FA7A226BFDC7700320B3D /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025FA7A526BFDC7700320B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025FA7A726BFDC7700320B3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 			children = (
 				02A39DD526C272CD0074B023 /* Model */,
 				0257CA1A26C6781500A0E819 /* AuthService.swift */,
+				0257CA2326C7C4BB00A0E819 /* AuthFirestore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0257CA1D26C683E600A0E819 /* Validator.swift */,
+				0257CA2526C7C5CB00A0E819 /* AuthUserError.swift */,
 				0257CA1F26C684C200A0E819 /* AuthError.swift */,
 			);
 			path = Helpers;
@@ -232,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				02A39DCB26C26AFB0074B023 /* CellConfigureProtocol.swift */,
+				0257CA2126C6A64200A0E819 /* AuthDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -380,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0257CA1526C5C18D00A0E819 /* ChatRequestViewController.swift in Sources */,
+				0257CA2626C7C5CB00A0E819 /* AuthUserError.swift in Sources */,
 				0257CA1B26C6781500A0E819 /* AuthService.swift in Sources */,
 				02A39DC726C268950074B023 /* GradientView.swift in Sources */,
 				025FA7BE26BFE72100320B3D /* UILabel + Extension.swift in Sources */,
@@ -389,6 +399,7 @@
 				025FA7A626BFDC7700320B3D /* AppDelegate.swift in Sources */,
 				0257CA0F26C5456C00A0E819 /* ProfileViewController.swift in Sources */,
 				025FA7BC26BFE61C00320B3D /* UIFont + Extensions.swift in Sources */,
+				0257CA2226C6A64200A0E819 /* AuthDelegate.swift in Sources */,
 				02A39DD226C2725B0074B023 /* MUser.swift in Sources */,
 				02A39DC526C1C48E0074B023 /* ActiveChatsCell.swift in Sources */,
 				025FA7A826BFDC7700320B3D /* SceneDelegate.swift in Sources */,
@@ -406,6 +417,7 @@
 				025FA7D526C15F3E00320B3D /* PeopleViewController.swift in Sources */,
 				025FA7CE26C14C5900320B3D /* SetupProfileViewController.swift in Sources */,
 				025FA7C626C1226A00320B3D /* SignUpViewController.swift in Sources */,
+				0257CA2426C7C4BB00A0E819 /* AuthFirestore.swift in Sources */,
 				0257CA2026C684C200A0E819 /* AuthError.swift in Sources */,
 				0257CA0D26C511D100A0E819 /* ViewContrtoller + Extension.swift in Sources */,
 				025FA7D126C15F0F00320B3D /* MainTabBarController.swift in Sources */,
